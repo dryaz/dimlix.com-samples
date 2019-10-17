@@ -1,11 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/samplesList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:paddingBottom="16dp"
+        android:layout_height="120dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/read_us_in_internet"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@id/imgTelegram"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgTelegram"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/tg"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgVkontakte"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgVkontakte"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/vk"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgFacebook"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imgTelegram" />
+
+        <ImageView
+            android:id="@+id/imgFacebook"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/fb"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgWeb"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imgVkontakte" />
+
+        <ImageView
+            android:id="@+id/imgWeb"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/web"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imgFacebook" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
