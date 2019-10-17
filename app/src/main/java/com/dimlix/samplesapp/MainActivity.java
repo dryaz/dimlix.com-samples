@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.dimlix.samplesapp.variants.NetworkMonitoringActivity;
+import com.dimlix.samplesapp.variants.networkmonitor.NetworkMonitoringActivity;
 
 import java.util.ArrayList;
 import java.util.List;

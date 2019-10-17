@@ -3,4 +3,8 @@
     <string name="network_monitoring_descr">Статус текущего подключения к сети</string>
     <string name="connected">Подключено</string>
     <string name="network_monitoring">Мониторинг наличия сети</string>
+    <string name="no_connection">Нет подключения</string>
+    <string name="wifi">WiFi</string>
+    <string name="cellurar">Мобильная сеть</string>
+    <string name="other_connection">Нет WiFi и сотовых данных, но есть что-то другое, например Bluetooth</string>
 </resources>
