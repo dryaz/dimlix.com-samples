@@ -95,19 +95,7 @@ public class NetworkMonitoringActivity extends BaseSampleActivity {
         ConnectivityManager cm =
                 (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
-        cm.registerDefaultNetworkCallback(new ConnectivityManager.NetworkCallback() {
-            @Override
-            public void onAvailable(Network network) {
-                updateNetworkStatus();
-                super.onAvailable(network);
-            }
-
-            @Override
-            public void onLost(Network network) {
-                updateNetworkStatus();
-                super.onLost(network);
-            }
-        });
+        cm.registerDefaultNetworkCallback(networkCallback);
     }
 
     @Override
