@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
             if (sample.dynamicLinkPath.equals(path)) {
                 Intent sampleActivity = new Intent(this, sample.classtoStart);
                 sampleActivity.putExtra(BaseSampleActivity.HEADER_KEY, sample.header);
+                sampleActivity.putExtra(BaseSampleActivity.PATH_KEY, sample.dynamicLinkPath);
                 startActivity(sampleActivity);
                 return;
             }

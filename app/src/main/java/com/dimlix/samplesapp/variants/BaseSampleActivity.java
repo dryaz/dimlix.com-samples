@@ -1,13 +1,22 @@
 package com.dimlix.samplesapp.variants;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.dimlix.samplesapp.R;
+
 public abstract class BaseSampleActivity extends AppCompatActivity {
     public static final String HEADER_KEY = "headkey";
+    public static final String PATH_KEY = "pathKey";
+    private String mPathToArticle;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -15,6 +24,7 @@ public abstract class BaseSampleActivity extends AppCompatActivity {
         setContentView(getLayoutId());
         setTitle(getIntent().getStringExtra(HEADER_KEY));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mPathToArticle = getIntent().getStringExtra(PATH_KEY);
     }
 
     @Override
@@ -23,9 +33,25 @@ public abstract class BaseSampleActivity extends AppCompatActivity {
             case android.R.id.home:
                 this.finish();
                 return true;
+            case R.id.btnGoToArticle:
+                openArticle();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void openArticle() {
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse("https://dimlix.com/" + mPathToArticle));
+        startActivity(i);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.base_menu, menu);
+        return !TextUtils.isEmpty(mPathToArticle);
     }
 
     protected abstract int getLayoutId();

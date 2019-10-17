@@ -39,6 +39,7 @@ public class SamplesAdapter extends RecyclerView.Adapter<SamplesAdapter.ViewHold
                 Intent sampleActivity = new Intent(holder.itemView.getContext(),
                         item.classtoStart);
                 sampleActivity.putExtra(BaseSampleActivity.HEADER_KEY, item.header);
+                sampleActivity.putExtra(BaseSampleActivity.PATH_KEY, item.dynamicLinkPath);
                 holder.itemView.getContext().startActivity(sampleActivity);
             }
         });
