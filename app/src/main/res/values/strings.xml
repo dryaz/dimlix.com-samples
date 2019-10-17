@@ -8,4 +8,5 @@
     <string name="cellurar">Мобильная сеть</string>
     <string name="other_connection">Нет WiFi и сотовых данных, но есть что-то другое, например Bluetooth</string>
     <string name="read_us_in_internet">Читайте статьи, примеры и заметки</string>
+    <string name="no_sample_found">Некорректная ссылка на пример</string>
 </resources>

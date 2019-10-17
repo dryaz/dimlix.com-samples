@@ -1,7 +1,6 @@
 package com.dimlix.samplesapp;
 
 import android.content.Intent;
-import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,9 +15,9 @@ import java.util.List;
 
 public class SamplesAdapter extends RecyclerView.Adapter<SamplesAdapter.ViewHolder> {
 
-    private List<Pair<String, Class>> mData;
+    private List<MainActivity.Sample> mData;
 
-    public SamplesAdapter(List<Pair<String, Class>> mData) {
+    public SamplesAdapter(List<MainActivity.Sample> mData) {
         this.mData = mData;
     }
 
@@ -32,14 +31,14 @@ public class SamplesAdapter extends RecyclerView.Adapter<SamplesAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
-        final Pair<String, Class> item = mData.get(position);
-        holder.mItem.setText(item.first);
+        final MainActivity.Sample item = mData.get(position);
+        holder.mItem.setText(item.header);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent sampleActivity = new Intent(holder.itemView.getContext(),
-                        item.second);
-                sampleActivity.putExtra(BaseSampleActivity.HEADER_KEY, item.first);
+                        item.classtoStart);
+                sampleActivity.putExtra(BaseSampleActivity.HEADER_KEY, item.header);
                 holder.itemView.getContext().startActivity(sampleActivity);
             }
         });
