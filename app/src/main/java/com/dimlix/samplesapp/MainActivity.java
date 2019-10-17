@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.dimlix.samplesapp.variants.BaseSampleActivity;
+import com.dimlix.samplesapp.variants.lottie.LottieAnimationActivity;
 import com.dimlix.samplesapp.variants.networkmonitor.NetworkMonitoringActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -115,6 +116,8 @@ public class MainActivity extends AppCompatActivity {
         List<Sample> samples = new ArrayList<>();
         samples.add(new Sample(getString(R.string.network_monitoring),
                 NetworkMonitoringActivity.class, "network-monitoring-android"));
+        samples.add(new Sample(getString(R.string.lottie_animation),
+                LottieAnimationActivity.class, "lottie-animation"));
         return samples;
     }
 

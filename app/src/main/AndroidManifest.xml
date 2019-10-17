@@ -28,6 +28,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.dimlix.samplesapp.variants.networkmonitor.NetworkMonitoringActivity" />
+        <activity android:name="com.dimlix.samplesapp.variants.lottie.LottieAnimationActivity" />
     </application>
 
 </manifest>
