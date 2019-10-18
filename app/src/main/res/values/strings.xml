@@ -17,7 +17,7 @@
     <string name="google_ads">Реклама в приложении. Google ads</string>
     <string name="main_view_content">Основной контент</string>
     <string name="peek_height_descr">Peek размером 100dp\nМожно вытянуть</string>
-    <string name="bottom_sheet_view_content">Остальное контент всплывающем панели</string>
+    <string name="bottom_sheet_view_content">Остальной контент всплывающей панели</string>
     <string name="bottom_sheet_view_content_half">Панель на пол экрана</string>
     <string name="collapse_panel">Свернуть панель</string>
     <string name="open_half_panel">Открыть панель на 1/2</string>
