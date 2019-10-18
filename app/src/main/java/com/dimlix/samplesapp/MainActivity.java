@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.dimlix.samplesapp.variants.BaseSampleActivity;
+import com.dimlix.samplesapp.variants.ads.WebViewActivity;
 import com.dimlix.samplesapp.variants.bottomsheet.BottomSheetDrawerActivity;
 import com.dimlix.samplesapp.variants.lottie.LottieAnimationActivity;
 import com.dimlix.samplesapp.variants.networkmonitor.NetworkMonitoringActivity;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView list = findViewById(R.id.samplesList);
         list.setLayoutManager(new LinearLayoutManager(this,
                 LinearLayoutManager.VERTICAL, false));
-        list.setAdapter(new SamplesAdapter(mSamples));
+        list.setAdapter(new SamplesAdapter(this, mSamples));
 
         findViewById(R.id.imgTelegram).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
         samples.add(new Sample(getString(R.string.bottom_sheet_drawer),
                 BottomSheetDrawerActivity.class, "bottomsheet-drawer"));
         samples.add(new Sample(getString(R.string.google_ads),
-                LottieAnimationActivity.class, "lottie-animation"));
+                WebViewActivity.class, "in-app-ads-in-android"));
         return samples;
     }
 

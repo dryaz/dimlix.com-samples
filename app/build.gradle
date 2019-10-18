@@ -12,6 +12,14 @@ android {
     }
     buildTypes {
         release {
+            buildConfigField "String", "AD_BANNER", "\"ca-app-pub-7833116702439118/2180630967\""
+            buildConfigField "String", "AD_INTER", "\"ca-app-pub-7833116702439118/3288046118\""
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField "String", "AD_BANNER", "\"ca-app-pub-3940256099942544/6300978111\""
+            buildConfigField "String", "AD_INTER", "\"ca-app-pub-3940256099942544/1033173712\""
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -31,6 +39,9 @@ dependencies {
 
     //Lottie
     implementation "com.airbnb.android:lottie:3.0.7"
+
+    // Ads
+    implementation 'com.google.android.gms:play-services-ads:18.2.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

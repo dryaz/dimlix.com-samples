@@ -16,7 +16,7 @@ import com.dimlix.samplesapp.R;
 public abstract class BaseSampleActivity extends AppCompatActivity {
     public static final String HEADER_KEY = "headkey";
     public static final String PATH_KEY = "pathKey";
-    private String mPathToArticle;
+    protected String pathToArticle;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public abstract class BaseSampleActivity extends AppCompatActivity {
         setContentView(getLayoutId());
         setTitle(getIntent().getStringExtra(HEADER_KEY));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        mPathToArticle = getIntent().getStringExtra(PATH_KEY);
+        pathToArticle = getIntent().getStringExtra(PATH_KEY);
     }
 
     @Override
@@ -43,7 +43,7 @@ public abstract class BaseSampleActivity extends AppCompatActivity {
 
     private void openArticle() {
         Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse("https://dimlix.com/" + mPathToArticle));
+        i.setData(Uri.parse("https://dimlix.com/" + pathToArticle));
         startActivity(i);
     }
 
@@ -51,7 +51,7 @@ public abstract class BaseSampleActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.base_menu, menu);
-        return !TextUtils.isEmpty(mPathToArticle);
+        return !TextUtils.isEmpty(pathToArticle);
     }
 
     protected abstract int getLayoutId();

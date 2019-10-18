@@ -30,6 +30,11 @@
         <activity android:name="com.dimlix.samplesapp.variants.networkmonitor.NetworkMonitoringActivity" />
         <activity android:name="com.dimlix.samplesapp.variants.lottie.LottieAnimationActivity" />
         <activity android:name=".variants.bottomsheet.BottomSheetDrawerActivity" />
+        <activity android:name=".variants.ads.WebViewActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7833116702439118~3876856016"/>
     </application>
 
 </manifest>

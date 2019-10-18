@@ -14,7 +14,7 @@
     <string name="click_to_animate">Нажмите на картинку для\nанимации на следующий шаг</string>
     <string name="in_app_v_3">Покупки. In-app Billing v3</string>
     <string name="bottom_sheet_drawer">BottomSheet. Выдвигающийся экран</string>
-    <string name="google_ads">Реклама в приложении. Google ads</string>
+    <string name="google_ads"><![CDATA[Реклама межстраниц —> WebView]]></string>
     <string name="main_view_content">Основной контент</string>
     <string name="peek_height_descr">Peek размером 100dp\nМожно вытянуть</string>
     <string name="bottom_sheet_view_content">Остальной контент всплывающей панели</string>
@@ -23,4 +23,6 @@
     <string name="open_half_panel">Открыть панель на 1/2</string>
     <string name="open_panel">Открыть панель</string>
     <string name="collapse_peek">Опустить панель до Peek</string>
+    <string name="banner">Баннер</string>
+    <string name="interst_not_loaded">Реклама еще не готова</string>
 </resources>
