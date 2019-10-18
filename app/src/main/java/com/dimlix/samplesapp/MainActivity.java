@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.dimlix.samplesapp.variants.BaseSampleActivity;
+import com.dimlix.samplesapp.variants.bottomsheet.BottomSheetDrawerActivity;
 import com.dimlix.samplesapp.variants.lottie.LottieAnimationActivity;
 import com.dimlix.samplesapp.variants.networkmonitor.NetworkMonitoringActivity;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -117,6 +118,14 @@ public class MainActivity extends AppCompatActivity {
         samples.add(new Sample(getString(R.string.network_monitoring),
                 NetworkMonitoringActivity.class, "network-monitoring-android"));
         samples.add(new Sample(getString(R.string.lottie_animation),
+                LottieAnimationActivity.class, "lottie-animation"));
+
+
+        samples.add(new Sample(getString(R.string.in_app_v_3),
+                LottieAnimationActivity.class, "lottie-animation"));
+        samples.add(new Sample(getString(R.string.bottom_sheet_drawer),
+                BottomSheetDrawerActivity.class, "bottomsheet-drawer"));
+        samples.add(new Sample(getString(R.string.google_ads),
                 LottieAnimationActivity.class, "lottie-animation"));
         return samples;
     }
