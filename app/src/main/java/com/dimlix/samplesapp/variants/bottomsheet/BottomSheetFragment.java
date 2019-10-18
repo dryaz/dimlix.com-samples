@@ -27,7 +27,9 @@ public class BottomSheetFragment extends Fragment {
         imgArrow = view.findViewById(R.id.imgArrow);
     }
 
-    public void setOpenProgress(float progress) {
+    void setOpenProgress(float progress) {
+        // Rotate arrow in 1/3 of the screen to 180
+        // meaning that after 1/3 we assume sheet to be opened
         imgArrow.setRotation(Math.min(180 * progress * 3, 180));
     }
 }

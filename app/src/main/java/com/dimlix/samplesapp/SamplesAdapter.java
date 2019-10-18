@@ -56,7 +56,7 @@ public class SamplesAdapter extends RecyclerView.Adapter<SamplesAdapter.ViewHold
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            mItem = (TextView) itemView;
+            mItem = itemView.findViewById(R.id.tvSampleText);
         }
     }
 }
