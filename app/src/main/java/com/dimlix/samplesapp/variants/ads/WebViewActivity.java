@@ -1,6 +1,8 @@
 package com.dimlix.samplesapp.variants.ads;
 
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.ViewGroup;
 import android.webkit.WebView;
 
 import androidx.annotation.Nullable;
@@ -18,7 +20,16 @@ public class WebViewActivity extends BaseSampleActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        WebView wv = findViewById(R.id.viewWeb);
+        ViewGroup container = findViewById(R.id.containerWebView);
+        WebView wv;
+        try {
+            wv = new WebView(this);
+        } catch(Resources.NotFoundException bugException) {
+            // Fallback for some android 5.x devices which will fire ResourceNotFoundException
+            bugException.printStackTrace();
+            wv = new WebView(getApplicationContext());
+        }
+        container.addView(wv);
         wv.loadUrl("https://dimlix.com/" + pathToArticle);
     }
 
