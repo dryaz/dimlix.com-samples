@@ -42,6 +42,9 @@ dependencies {
 
     // Ads
     implementation 'com.google.android.gms:play-services-ads:18.2.0'
+
+    // In-app
+    implementation 'com.anjlab.android.iab.v3:library:1.0.44'
 }
 
 apply plugin: 'com.google.gms.google-services'

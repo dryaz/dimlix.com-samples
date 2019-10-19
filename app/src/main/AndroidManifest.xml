@@ -4,6 +4,9 @@
     package="com.dimlix.samplesapp">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -31,6 +34,7 @@
         <activity android:name="com.dimlix.samplesapp.variants.lottie.LottieAnimationActivity" />
         <activity android:name=".variants.bottomsheet.BottomSheetDrawerActivity" />
         <activity android:name=".variants.ads.WebViewActivity" />
+        <activity android:name=".variants.purchases.PurchaseActivity" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"

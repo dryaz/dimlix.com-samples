@@ -17,6 +17,7 @@ import com.dimlix.samplesapp.variants.ads.WebViewActivity;
 import com.dimlix.samplesapp.variants.bottomsheet.BottomSheetDrawerActivity;
 import com.dimlix.samplesapp.variants.lottie.LottieAnimationActivity;
 import com.dimlix.samplesapp.variants.networkmonitor.NetworkMonitoringActivity;
+import com.dimlix.samplesapp.variants.purchases.PurchaseActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
@@ -120,10 +121,8 @@ public class MainActivity extends AppCompatActivity {
                 NetworkMonitoringActivity.class, "network-monitoring-android"));
         samples.add(new Sample(getString(R.string.lottie_animation),
                 LottieAnimationActivity.class, "lottie-animation"));
-
-
         samples.add(new Sample(getString(R.string.in_app_v_3),
-                LottieAnimationActivity.class, "lottie-animation"));
+                PurchaseActivity.class, "android-in-app-billin-v3"));
         samples.add(new Sample(getString(R.string.bottom_sheet_drawer),
                 BottomSheetDrawerActivity.class, "bottomsheet-drawer"));
         samples.add(new Sample(getString(R.string.google_ads),
