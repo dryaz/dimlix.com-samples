@@ -25,4 +25,12 @@
     <string name="collapse_peek">Опустить панель до Peek</string>
     <string name="banner">Баннер</string>
     <string name="interst_not_loaded">Реклама еще не готова</string>
+    <string name="in_app">In app примеры</string>
+    <string name="in_app_descr">Кнопки ниже проводят реальную оплату.\n\nВы можете собрать данное приложение из исходников и заменить оплату на тестовую.\n\nНо ваша поддержка поможет развивать проект и создавать еще больше примеров под Android.</string>
+    <string name="infinite_time_payment">Не восстанавливаемые за %s</string>
+    <string name="one_time_payment">Единоразовая за %s</string>
+    <string name="consume_one_time">\"Использовать\" единоразовую</string>
+    <string name="subscription">Подписка за %s</string>
+    <string name="bought_number">Куплено раз: %d</string>
+    <string name="go_to_source">Перейти к исходникам</string>
 </resources>

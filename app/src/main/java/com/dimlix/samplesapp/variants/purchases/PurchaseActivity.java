@@ -16,6 +16,10 @@ public class PurchaseActivity extends BaseSampleActivity implements BillingProce
 
     BillingProcessor mBillingProcessor;
 
+    private final static String ONE_TIME_PAYMENT = "otp";
+    private final static String MULTI_TIME_PAYMENT = "mtp";
+    private final static String SUBSCRIPTION = "sups";
+
     @Override
     protected int getLayoutId() {
         return R.layout.billing_activity;
