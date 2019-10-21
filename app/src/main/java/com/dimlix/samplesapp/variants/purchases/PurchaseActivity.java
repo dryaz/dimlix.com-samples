@@ -160,9 +160,10 @@ public class PurchaseActivity extends BaseSampleActivity implements BillingProce
 
     private void setupConsumableButtons(boolean isPurchased) {
         mConsumabelButton.setEnabled(isPurchased);
-        mSubscriptionButton.setEnabled(!isPurchased);
+        mSingleTimePaymentButton.setEnabled(!isPurchased);
         if (isPurchased) {
             mSingleTimePaymentButton.setText(R.string.already_bought);
+            mConsumabelButton.setText(R.string.consume_one_time);
         } else {
             SkuDetails details = mBillingProcessor.getPurchaseListingDetails(ONE_TIME_PAYMENT);
             mSingleTimePaymentButton.setText(getString(R.string.one_time_payment_value, details.priceText));
