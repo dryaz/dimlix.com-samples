@@ -39,4 +39,5 @@
     <string name="already_bought">Уже куплено</string>
     <string name="not_bought_yet">Еще не куплено</string>
     <string name="already_subscribed">Уже подписаны</string>
+    <string name="vpn">VPN</string>
 </resources>

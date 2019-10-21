@@ -73,7 +73,18 @@ public class NetworkMonitoringActivity extends BaseSampleActivity {
 
         NetworkCapabilities capabilities = cm.getNetworkCapabilities(cm.getActiveNetwork());
         if (capabilities != null) {
-            if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
+            if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_VPN)) {
+                // If current connection is VPN, check if it's over WIFI or Cellular
+                for (Network network: cm.getAllNetworks()) {
+                    NetworkCapabilities otherNetworkCap = cm.getNetworkCapabilities(network);
+                    if (otherNetworkCap.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
+                        return getString(R.string.vpn) + ": " + getString(R.string.wifi);
+                    } else if (otherNetworkCap.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)) {
+                        return getString(R.string.vpn) + ": " + getString(R.string.cellurar);
+                    }
+                }
+                return getString(R.string.vpn);
+            } else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
                 return getString(R.string.wifi);
             } else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)) {
                 return getString(R.string.cellurar);
@@ -103,6 +114,7 @@ public class NetworkMonitoringActivity extends BaseSampleActivity {
         super.onResume();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             registerDefaultNetworkCallback();
+            updateNetworkStatus();
         } else {
             registeReceiverForCallbacks();
         }
@@ -139,6 +151,12 @@ public class NetworkMonitoringActivity extends BaseSampleActivity {
                 public void onLost(Network network) {
                     updateNetworkStatus();
                     super.onLost(network);
+                }
+
+                @Override
+                public void onUnavailable() {
+                    updateNetworkStatus();
+                    super.onUnavailable();
                 }
             };
 }
