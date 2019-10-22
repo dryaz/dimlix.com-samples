@@ -114,10 +114,10 @@ public class NetworkMonitoringActivity extends BaseSampleActivity {
         super.onResume();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             registerDefaultNetworkCallback();
-            updateNetworkStatus();
         } else {
             registeReceiverForCallbacks();
         }
+        updateNetworkStatus();
     }
 
     @Override
