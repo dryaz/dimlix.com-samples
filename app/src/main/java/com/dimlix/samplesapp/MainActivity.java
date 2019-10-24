@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         samples.add(new Sample(getString(R.string.lottie_animation),
                 LottieAnimationActivity.class, "lottie-animation"));
         samples.add(new Sample(getString(R.string.in_app_v_3),
-                PurchaseActivity.class, "android-in-app-billin-v3"));
+                PurchaseActivity.class, "android-in-app-billing-v3"));
         samples.add(new Sample(getString(R.string.bottom_sheet_drawer),
                 BottomSheetDrawerActivity.class, "bottomsheet-drawer"));
         samples.add(new Sample(getString(R.string.google_ads),
