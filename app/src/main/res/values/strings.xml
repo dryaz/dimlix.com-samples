@@ -40,4 +40,7 @@
     <string name="not_bought_yet">Еще не куплено</string>
     <string name="already_subscribed">Уже подписаны</string>
     <string name="vpn">VPN</string>
+    <string name="go_to_next_fragment">Вперед</string>
+    <string name="back">Назад</string>
+    <string name="animated_fragments">Анимированные переходы во фрагментах</string>
 </resources>

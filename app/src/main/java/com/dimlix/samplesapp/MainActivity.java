@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.dimlix.samplesapp.variants.BaseSampleActivity;
 import com.dimlix.samplesapp.variants.ads.WebViewActivity;
+import com.dimlix.samplesapp.variants.animatedFragments.AnimatedFragmentTransitionActivity;
 import com.dimlix.samplesapp.variants.bottomsheet.BottomSheetDrawerActivity;
 import com.dimlix.samplesapp.variants.lottie.LottieAnimationActivity;
 import com.dimlix.samplesapp.variants.networkmonitor.NetworkMonitoringActivity;
@@ -131,6 +132,8 @@ public class MainActivity extends AppCompatActivity {
                 BottomSheetDrawerActivity.class, "bottomsheet-drawer"));
         samples.add(new Sample(getString(R.string.google_ads),
                 WebViewActivity.class, "in-app-ads-in-android"));
+        samples.add(new Sample(getString(R.string.animated_fragments),
+                AnimatedFragmentTransitionActivity.class, null));
         return samples;
     }
 

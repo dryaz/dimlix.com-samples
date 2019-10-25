@@ -6,8 +6,8 @@ android {
         applicationId "com.dimlix.samplesapp"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 2
-        versionName "1.0"
+        versionCode 4
+        versionName "1.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -23,6 +23,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -45,6 +49,16 @@ dependencies {
 
     // In-app
     implementation 'com.anjlab.android.iab.v3:library:1.0.44'
+
+    // Navigation lib for single activity approach
+    implementation 'ru.terrakok.cicerone:cicerone:5.0.0'
+
+    // ReactiveX
+    implementation "io.reactivex.rxjava2:rxjava:2.2.9"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+
+    // Animations
+    implementation 'at.wirecube:additive_animations:1.7.3'
 }
 
 apply plugin: 'com.google.gms.google-services'
